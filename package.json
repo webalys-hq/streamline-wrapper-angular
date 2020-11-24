@@ -1,6 +1,6 @@
 {
   "name": "@streamlinehq/streamline-wrapper-angular",
-  "version": "1.3.2",
+  "version": "1.0.0",
   "private": false,
   "description": "Angular wrapper for Streamline icons and illustrations",
   "keywords": ["angular", "streamline", "streamline-icons", "icons", "wrapper", "svg", "illustration"],

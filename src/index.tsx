@@ -1,2 +1,1 @@
-import StreamlineIcon from './components/StreamlineIcon'
-export default StreamlineIcon
+console.debug('in index')

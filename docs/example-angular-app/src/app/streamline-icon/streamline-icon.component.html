@@ -1,0 +1,23 @@
+<i class="Streamline_Icon" [ngClass]="classes">
+  <svg
+    [attr.height]="sizeObject.height"
+    [attr.style]="style"
+    [attr.viewBox]="viewBox"
+    [attr.width]="sizeObject.width"
+  >
+    <g
+      *ngIf="!sizeObject.isDefault; else originalBlock"
+      [attr.transform]="transform"
+    >
+      <ng-container *ngFor="let drawingPath of icon[4]; let index=index">
+        <path [attr.d]="drawingPath" #pathElement/>
+      </ng-container>
+    </g>
+
+    <ng-template #originalBlock>
+      <ng-container *ngFor="let drawingPath of icon[4]; let index=index">
+        <path [attr.d]="drawingPath" #pathElement/>
+      </ng-container>
+    </ng-template>
+  </svg>
+</i>
