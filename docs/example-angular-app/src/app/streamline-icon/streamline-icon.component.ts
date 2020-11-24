@@ -36,57 +36,53 @@ export class StreamlineIconComponent implements AfterViewInit {
   @Input() public height = 24;
   @Input() public icon: Icon;
   @Input() public spin: boolean;
-  @Input() public pulse: boolean;
   @Input() public infinite: boolean;
   @Input() public fast: boolean;
   @Input() public easeInOut: boolean;
 
   ngAfterViewInit(): void {
     this.pathEl.forEach((el, idx) => {
-      const tempIcon = this.icon[3];
+      const {
+        fill, stroke, 'stroke-linecap': strokeLinecap, 'stroke-linejoin': strokeLinejoin, 'stroke-width': strokeWidth
+      } = this.icon[3][idx];
 
-      const tempOptions = {
-        ...tempIcon[idx],
-        stroke: this.stroke || tempIcon[idx].stroke,
-        fill: this.fill || tempIcon[idx].fill,
-      };
-
-      for (const [key, value] of Object.entries(tempOptions)) {
-        el.nativeElement.setAttribute(key, value);
-      }
+      el.nativeElement.setAttribute('fill', this.fill || fill);
+      el.nativeElement.setAttribute('stroke', this.stroke || stroke);
+      el.nativeElement.setAttribute('stroke-linecap', strokeLinecap);
+      el.nativeElement.setAttribute('stroke-linejoin', strokeLinejoin);
+      el.nativeElement.setAttribute('stroke-width', strokeWidth);
     });
   }
 
   get classes(): object {
     return {
-      Streamline_Icon_Spin: this.spin,
-      Streamline_Icon_Pulse: this.pulse,
-      Streamline_Animation_Infinite: this.infinite,
-      Streamline_Icon_Fast: this.fast,
-      Streamline_Icon_EaseInOut: this.easeInOut,
-      Streamline_Icon_Animated: this.spin || this.pulse,
+      'Streamline_Icon--spin': this.spin,
+      'Streamline_Icon--infinite': this.infinite,
+      'Streamline_Icon--fast': this.fast,
+      'Streamline_Icon--ease_in_out': this.easeInOut,
+      'Streamline_Icon--animated': this.spin,
     };
   }
 
-  get sizeObject(): {width: number, height: number, isDefault: boolean} {
+  get sizeObject(): {width: number, height: number, shouldResize: boolean} {
     const sizeObject = {
       width: this.icon[1],
       height: this.icon[2],
-      isDefault: true,
+      shouldResize: false,
     };
     if (this.size !== 24) {
-      sizeObject.isDefault = this.size === sizeObject.width;
+      sizeObject.shouldResize = this.size !== sizeObject.width;
       sizeObject.height = this.size;
       sizeObject.width = this.size;
     } else {
       if (this.height !== sizeObject.height) {
         sizeObject.height = this.height;
-        sizeObject.isDefault = false;
+        sizeObject.shouldResize = true;
       }
 
       if (this.width !== sizeObject.width) {
         sizeObject.width = this.width;
-        sizeObject.isDefault = false;
+        sizeObject.shouldResize = true;
       }
     }
     return sizeObject;

@@ -1,32 +1,28 @@
 .Streamline_Icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-sizing: content-box;
+  display: inline-block;
 }
 
-.Streamline_Icon_Animated {
+.Streamline_Icon--animated {
   animation-duration: 1s;
   animation-fill-mode: both;
   transform-origin: center;
   animation-timing-function: linear;
-
 }
 
-.Streamline_Icon_Spin {
+.Streamline_Icon--spin {
   animation-name: rotate;
   animation-duration: 2s;
 }
 
-.Streamline_Animation_Infinite {
+.Streamline_Icon--infinite {
   animation-iteration-count: infinite;
 }
 
-.Streamline_Animation_Fast {
+.Streamline_Animation--fast {
   animation-duration: 1s;
 }
 
-.Streamline_Animation_EaseInOut {
+.Streamline_Animation--ease_in_out {
   animation-timing-function: ease-in-out;
 }
 

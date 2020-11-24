@@ -7,5 +7,5 @@ import HouseIcon from './icon';
 })
 export class AppComponent {
   title = 'example-angular-app';
-  public icon = HouseIcon
+  public icon = HouseIcon;
 }

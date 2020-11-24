@@ -6,7 +6,7 @@
     [attr.width]="sizeObject.width"
   >
     <g
-      *ngIf="!sizeObject.isDefault; else originalBlock"
+      *ngIf="sizeObject.shouldResize; else originalBlock"
       [attr.transform]="transform"
     >
       <ng-container *ngFor="let drawingPath of icon[4]; let index=index">
