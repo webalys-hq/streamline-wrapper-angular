@@ -4,9 +4,57 @@
   </h1>
   <section>
     <figure>
-      <figcaption>Default props </figcaption>
-      <code>code </code>
-      <app-streamline-icon [icon]="icon" [spin]=true [pulse]="true"></app-streamline-icon>
+      <figcaption>First set the icon in your parent component</figcaption>
+      <code>public icon = HouseIcon;</code>
+      <figcaption>Then in your template add the icon</figcaption>
+    </figure>
+    <figure>
+      <figcaption>Default options </figcaption>
+      <code>[icon]="icon"</code>
+      <app-streamline-icon [icon]="icon"></app-streamline-icon>
+    </figure>
+
+    <figure>
+      <figcaption>
+        To spin once
+      </figcaption>
+      <code>[icon]="icon" spin </code>
+      <app-streamline-icon [icon]="icon" [spin]=true></app-streamline-icon>
+    </figure>
+    <figure>
+      <figcaption>
+        Infinite spin
+      </figcaption>
+      <code>[icon]="icon" spin infinite </code>
+      <app-streamline-icon [icon]="icon" [spin]=true [infinite]=true></app-streamline-icon>
+    </figure>
+    <figure>
+      <figcaption>
+        Fast infinite spin
+      </figcaption>
+      <code>[icon]="icon" spin infinite fast </code>
+      <app-streamline-icon [icon]="icon" [spin]=true [infinite]=true [fast]=true></app-streamline-icon>
+    </figure>
+    <figure>
+      <figcaption>
+        Fast infinite spin with different speed
+      </figcaption>
+      <code>[icon]="icon" spin infinite fast easeInOut </code>
+      <app-streamline-icon [icon]="icon" [spin]=true [infinite]=true [fast]=true [easeInOut]=true></app-streamline-icon>
+    </figure>
+    <figure>
+      <figcaption>
+        Custom size
+      </figcaption>
+      <code>[icon]="icon" size=48 </code>
+      <app-streamline-icon [icon]="icon" [size]=48></app-streamline-icon>
+    </figure>
+    <figure>
+      <figcaption>
+        Custom width and height
+      </figcaption>
+      <code>[icon]="icon" width=64 height=32 </code>
+      <app-streamline-icon [icon]="icon" [width]=64 [height]=32></app-streamline-icon>
     </figure>
   </section>
 </main>
