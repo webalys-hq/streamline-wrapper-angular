@@ -10,6 +10,7 @@ Check docs/example-angular-app project to see it in use.
 1. Import the module
 ```
 // in your module, eg app.module.ts
+
 import {StreamlineIconModule} from '@streamlinehq/streamline-wrapper-angular';
 
 // Then add it to imports array:
@@ -34,7 +35,7 @@ export class AppModule { }
 // in your component, eg app.component.ts
 
 import { Component } from '@angular/core';
-import HouseIcon from './icon'; // <-- this line, can be any svg icon from Strealine
+import HouseIcon from './icon'; // <-- this line, can be any svg icon from Streamline
 
 @Component({
   selector: 'app-root',

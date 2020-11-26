@@ -19,7 +19,7 @@
     "@angular/platform-browser": "~11.0.1",
     "@angular/platform-browser-dynamic": "~11.0.1",
     "@angular/router": "~11.0.1",
-    "@streamlinehq/streamline-wrapper-angular": "^1.0.0",
+    "@streamlinehq/streamline-wrapper-angular": "^1.0.1",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.2"
