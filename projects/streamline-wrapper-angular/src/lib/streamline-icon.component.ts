@@ -20,7 +20,8 @@ export type Icon = [
 ];
 
 @Component({
-  selector: 'lib-streamline-icon',
+  // tslint:disable-next-line:component-selector
+  selector: 'streamline-icon',
   templateUrl: './streamline-icon.component.html',
   styleUrls: ['./streamline-icon.component.css'],
 })

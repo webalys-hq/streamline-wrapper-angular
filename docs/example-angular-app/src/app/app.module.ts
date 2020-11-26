@@ -3,7 +3,8 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import {StreamlineWrapperAngularModule} from '@streamlinehq/streamline-wrapper-angular';
+// import {StreamlineWrapperAngularModule} from '@streamlinehq/streamline-wrapper-angular';
+import {StreamlineIconModule} from 'streamline-wrapper-angular';
 
 @NgModule({
   declarations: [
@@ -12,7 +13,8 @@ import {StreamlineWrapperAngularModule} from '@streamlinehq/streamline-wrapper-a
   imports: [
     BrowserModule,
     AppRoutingModule,
-    StreamlineWrapperAngularModule,
+    // StreamlineWrapperAngularModule,
+    StreamlineIconModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
