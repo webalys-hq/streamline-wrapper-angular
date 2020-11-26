@@ -1,6 +1,6 @@
 {
   "name": "example-angular-app",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -11,6 +11,7 @@
   },
   "private": true,
   "dependencies": {
+    "@streamlinehq/streamline-wrapper-angular": "^0.0.1",
     "@angular/animations": "~11.0.1",
     "@angular/common": "~11.0.1",
     "@angular/compiler": "~11.0.1",

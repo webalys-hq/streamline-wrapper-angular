@@ -20,7 +20,7 @@ export type Icon = [
 ];
 
 @Component({
-  selector: 'app-streamline-icon',
+  selector: 'lib-streamline-icon',
   templateUrl: './streamline-icon.component.html',
   styleUrls: ['./streamline-icon.component.css'],
 })

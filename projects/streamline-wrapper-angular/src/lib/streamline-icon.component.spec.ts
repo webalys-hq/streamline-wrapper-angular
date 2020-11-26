@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {StreamlineIconComponent} from './streamline-icon.component';
 
-import { StreamlineIconComponent } from './streamline-icon.component';
 
 describe('StreamlineIconComponent', () => {
   let component: StreamlineIconComponent;

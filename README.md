@@ -1,29 +1,27 @@
-# Angular wrapper for Streamline icons and illustrations
+# StreamlineWrapperAngular
 
-This is a small Angular library which allows you to render Streamline SVG icons and illustrations.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.2.
 
-## How to install
+## Development server
 
-1. `yarn add @streamlinehq/streamline-wrapper-angular`
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## How to use
+## Code scaffolding
 
-Check `docs/example-angular-app` project created with CRA to see it in use.
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-```
-import StreamlineIcon from '@streamlinehq/streamline-wrapper-angular'
-// Imported as Streamline's Icon type. Check source for more details
-import HouseIcon from './icon'
+## Build
 
-const IconsList = () => (
-    <div>
-        <StreamlineIcon icon={HouseIcon}/>
-    </div>
-)
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-``` 
+## Running unit tests
 
-## More info
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-- It has full Typescript support
-- It has 0 dependencies
+## Running end-to-end tests
+
+Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+
+## Further help
+
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
