@@ -1,6 +1,6 @@
 {
   "name": "@streamlinehq/streamline-wrapper-angular-workspace",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "main": "dist/streamline-wrapper-angular",
   "directories": {
     "lib": "dist/streamline-wrapper-angular",

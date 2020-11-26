@@ -1,27 +1,54 @@
-# StreamlineWrapperAngular
+# Angular wrapper for Streamline icons and illustrations
+This is a small Angular library which allows you to render Streamline SVG icons and illustrations.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.2.
+## How to install
+`yarn add @streamlinehq/streamline-wrapper-angular`
 
-## Development server
+## How to use
+Check docs/example-angular-app project to see it in use.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+1. Import the module
+```
+// in your module, eg app.module.ts
+import {StreamlineIconModule} from '@streamlinehq/streamline-wrapper-angular';
 
-## Code scaffolding
+// Then add it to imports array:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+@NgModule({
+  declarations: [
+    AppComponent,
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    StreamlineIconModule, // <-- this line
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+```
 
-## Build
+2. Define the icon
+```
+// in your component, eg app.component.ts
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+import { Component } from '@angular/core';
+import HouseIcon from './icon'; // <-- this line, can be any svg icon from Strealine
 
-## Running unit tests
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+})
+export class AppComponent {
+  title = 'example-angular-app';
+  public icon = HouseIcon; // <-- this line, variable can have any name
+}
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+3. Render the icon in your template, eg in `app.component.html`
+```
+<streamline-icon [icon]="icon"></streamline-icon>
+```
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Note that you can import the Icon type from the package as well. 

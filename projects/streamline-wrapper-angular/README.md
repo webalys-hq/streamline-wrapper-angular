@@ -1,24 +1,54 @@
-# StreamlineWrapperAngular
+# Angular wrapper for Streamline icons and illustrations
+This is a small Angular library which allows you to render Streamline SVG icons and illustrations.
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.1.
+## How to install
+`yarn add @streamlinehq/streamline-wrapper-angular`
 
-## Code scaffolding
+## How to use
+Check docs/example-angular-app project to see it in use.
 
-Run `ng generate component component-name --project streamline-wrapper-angular` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project streamline-wrapper-angular`.
-> Note: Don't forget to add `--project streamline-wrapper-angular` or else it will be added to the default project in your `angular.json` file. 
+1. Import the module
+```
+// in your module, eg app.module.ts
+import {StreamlineIconModule} from '@streamlinehq/streamline-wrapper-angular';
 
-## Build
+// Then add it to imports array:
 
-Run `ng build streamline-wrapper-angular` to build the project. The build artifacts will be stored in the `dist/` directory.
+@NgModule({
+  declarations: [
+    AppComponent,
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    StreamlineIconModule, // <-- this line
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+```
 
-## Publishing
+2. Define the icon
+```
+// in your component, eg app.component.ts
 
-After building your library with `ng build streamline-wrapper-angular`, go to the dist folder `cd dist/streamline-wrapper-angular` and run `npm publish`.
+import { Component } from '@angular/core';
+import HouseIcon from './icon'; // <-- this line, can be any svg icon from Strealine
 
-## Running unit tests
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+})
+export class AppComponent {
+  title = 'example-angular-app';
+  public icon = HouseIcon; // <-- this line, variable can have any name
+}
+```
 
-Run `ng test streamline-wrapper-angular` to execute the unit tests via [Karma](https://karma-runner.github.io).
+3. Render the icon in your template, eg in `app.component.html`
+```
+<streamline-icon [icon]="icon"></streamline-icon>
+```
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Note that you can import the Icon type from the package as well. 
