@@ -36,6 +36,8 @@ export class AppModule { }
 
 import { Component } from '@angular/core';
 import HouseIcon from './icon'; // <-- this line, can be any svg icon from Streamline
+// Or you can import icon from a Streamline icon package like 
+// import { Home } from "@streamlinehq/streamline-light/lib/interface-essential"
 
 @Component({
   selector: 'app-root',
