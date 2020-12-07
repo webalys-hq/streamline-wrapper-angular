@@ -35,9 +35,9 @@ export class AppModule { }
 // in your component, eg app.component.ts
 
 import { Component } from '@angular/core';
-import HouseIcon from './icon'; // <-- this line, can be any svg icon from Streamline
-// Or you can import icon from a Streamline icon package like 
-// import { Home } from "@streamlinehq/streamline-light/lib/interface-essential"
+// To use a Streamline icon first import a category you want from a family you have access to, eg:
+import { Home } from "@streamlinehq/streamline-light/lib/interface-essential"
+// And then take the icon of your choice from that category, eg with `Home.House`.
 
 @Component({
   selector: 'app-root',
@@ -45,7 +45,7 @@ import HouseIcon from './icon'; // <-- this line, can be any svg icon from Strea
 })
 export class AppComponent {
   title = 'example-angular-app';
-  public icon = HouseIcon; // <-- this line, variable can have any name
+  public icon = Home.House; // <-- this line
 }
 ```
 
@@ -53,5 +53,3 @@ export class AppComponent {
 ```
 <streamline-icon [icon]="icon"></streamline-icon>
 ```
-
-Note that you can import the Icon type from the package as well. 
